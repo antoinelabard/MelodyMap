@@ -8,6 +8,9 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { Repository } from "./data/Repository"
+
+Repository.resetDatabase()
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),

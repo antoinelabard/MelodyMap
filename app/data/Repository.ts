@@ -1,48 +1,4 @@
-type Artist = {
-    id: string,
-    name: string,
-    instruments: [string],
-    genres: [string]
-}
-
-type Location = {
-    address: string,
-    city: string
-}
-
-type Concert = {
-    id: string,
-    location: Location,
-    date: string,
-    genre: string
-}
-
-class Repository {
-    static getArtists(): [Artist] {
-        //todo
-    }
-
-    static getArtistById(): Artist {
-        //todo
-    }
-
-    static addArtist(
-        id: string,
-        name: string,
-        instruments: [string],
-        genres: [string]
-    ): void {
-        //todo
-    }
-
-    static updateArtist(
-        id: string,
-        name: string,
-        instruments: [string],
-        genres: [string]
-    ): void {
-        //todo
-    }
+import { promises as fs } from "fs"
 
     static removeArtist(id: string): void {
         //todo
@@ -90,8 +46,9 @@ class Repository {
         //todo
     }
 
-    static resetDatabase(): void {
-        //todo
+    static async resetDatabase(): Promise<void> {
+        const dbDefault = await fs.readFile("./app/data/db-default.json", "utf-8")
+        await fs.writeFile("./db.json", dbDefault, "utf-8")
     }
 }
 
