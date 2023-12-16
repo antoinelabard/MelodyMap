@@ -1,6 +1,6 @@
 import {promises as fs} from "fs"
 
-type Artist = {
+export type Artist = {
     id: string,
     name: string,
     instruments: string[],
@@ -13,12 +13,12 @@ type Data = {
     cities: string[]
 }
 
-type Location = {
+export type Location = {
     address: string,
     city: string
 }
 
-type Concert = {
+export type Concert = {
     id: string,
     location: Location,
     date: string,
