@@ -1,4 +1,4 @@
-import {useLoaderData} from "@remix-run/react";
+import {Link, useLoaderData} from "@remix-run/react";
 import {Repository, Concert} from "~/data/Repository";
 import {ConcertCard} from "~/components/ConcertCard"
 import {Header} from "~/components/Header";
@@ -30,6 +30,7 @@ export default function ConcertsPage() {
             <Header/>
             <main>
                 <h1>Welcome to Remix</h1>
+                <Link to="/concert/new">Add a new concert</Link>
                 <fieldset>
                     <legend>Filter by genres</legend>
                     {genres.map((genre) => (

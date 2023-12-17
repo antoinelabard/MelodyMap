@@ -1,4 +1,4 @@
-import {useLoaderData} from "@remix-run/react";
+import {Link, useLoaderData} from "@remix-run/react";
 import {Repository, Artist} from "~/data/Repository";
 import {ArtistCard} from "~/components/ArtistCard";
 import {Header} from "~/components/Header";
@@ -43,6 +43,7 @@ export default function ArtistsPage() {
             <Header/>
             <main>
                 <h1>Welcome to Remix</h1>
+                <Link to="/artist/new">Add a new artist</Link>
                 <fieldset>
                     <legend>Filter by genres</legend>
                     {genres.map((genre) => (
