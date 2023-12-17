@@ -1,8 +1,7 @@
-import {ActionArgs, json} from "@remix-run/node"
-import {redirect} from "@remix-run/node"
+import type {LoaderArgs} from "@remix-run/node"
+import {ActionArgs, json, redirect} from "@remix-run/node"
 import {useLoaderData} from "@remix-run/react";
 import {Repository} from "~/data/Repository"
-import type {LoaderArgs} from "@remix-run/node"
 import {Header} from "~/components/Header";
 import {Artist} from "~/models/Artist";
 
@@ -65,26 +64,30 @@ export default function ArtistPage() {
                     <label className="w-fit font-bold m-1" htmlFor="name">
                         Name:
                     </label>
-                    <input className="border-4 rounded-lg border-orange-400 w-1/6 mb-3" defaultValue={artistData.defaultName} id="name" type="text" name="name" required/>
+                    <input className="border-4 rounded-lg border-orange-400 w-1/6 mb-3"
+                           defaultValue={artistData.defaultName} id="name" type="text" name="name" required/>
                     <label className="w-fit font-bold m-1" htmlFor="instruments">
                         Instruments (separated with new lines):
                     </label>
-                    <textarea className="border-4 rounded-lg border-orange-400 w-1/6 mb-3" id="instruments" name="instruments" rows={10} cols={20}
+                    <textarea className="border-4 rounded-lg border-orange-400 w-1/6 mb-3" id="instruments"
+                              name="instruments" rows={10} cols={20}
                               defaultValue={artistData.defaultInstruments.join("\n")}>
                     </textarea>
                     <label className="w-fit font-bold m-1" htmlFor="genres">
                         Genres (separated with new lines):
                     </label>
-                    <textarea className="border-4 rounded-lg border-orange-400 w-1/6 mb-3" id="genres" name="genres" rows={10} cols={20}
+                    <textarea className="border-4 rounded-lg border-orange-400 w-1/6 mb-3" id="genres" name="genres"
+                              rows={10} cols={20}
                               defaultValue={artistData.defaultGenres.join("\n")}>
                     </textarea>
-                    <input className="border-4 rounded-lg border-orange-400 w-1/6" type="hidden" name="id" defaultValue={artistData.id}/>
-                        <button className="m-3 px-5 py-2 bg-orange-400 rounded-lg font-bold w-fit" name="intent"
-                                value="addOrUpdate">Add or update
-                        </button>
-                        <button className="m-3 px-5 py-2 bg-orange-400 rounded-lg font-bold w-fit" name="intent"
-                                value="remove">Remove
-                        </button>
+                    <input className="border-4 rounded-lg border-orange-400 w-1/6" type="hidden" name="id"
+                           defaultValue={artistData.id}/>
+                    <button className="m-3 px-5 py-2 bg-orange-400 rounded-lg font-bold w-fit" name="intent"
+                            value="addOrUpdate">Add or update
+                    </button>
+                    <button className="m-3 px-5 py-2 bg-orange-400 rounded-lg font-bold w-fit" name="intent"
+                            value="remove">Remove
+                    </button>
                 </form>
             </main>
         </div>

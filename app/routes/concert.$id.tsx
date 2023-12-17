@@ -1,8 +1,7 @@
-import {ActionArgs, json} from "@remix-run/node"
-import {redirect} from "@remix-run/node"
-import {Link, useLoaderData} from "@remix-run/react";
-import {Repository} from "~/data/Repository"
 import type {LoaderArgs} from "@remix-run/node"
+import {ActionArgs, json, redirect} from "@remix-run/node"
+import {useLoaderData} from "@remix-run/react";
+import {Repository} from "~/data/Repository"
 import {Header} from "~/components/Header";
 import {Concert} from "~/models/Concert";
 
@@ -74,14 +73,16 @@ export default function ConcertPage() {
                         <label className="w-fit font-bold m-1" htmlFor="address">
                             Address:
                         </label>
-                        <input className="border-4 rounded-lg border-orange-400 mb-3" defaultValue={concertData.defaultAddress} id="address" type="text"
+                        <input className="border-4 rounded-lg border-orange-400 mb-3"
+                               defaultValue={concertData.defaultAddress} id="address" type="text"
                                name="address"
                                required/>
                         <label className="w-fit font-bold m-1" htmlFor="city-select">
                             City:
 
                         </label>
-                        <select className="border-4 rounded-lg border-orange-400 mb-3" defaultValue={concertData.DefaultCity} name="city" id="city-select" required>
+                        <select className="border-4 rounded-lg border-orange-400 mb-3"
+                                defaultValue={concertData.DefaultCity} name="city" id="city-select" required>
                             <option value="">--Please choose an option--</option>
                             {cities.map((city) => (
                                 <option
@@ -95,17 +96,18 @@ export default function ConcertPage() {
                         Date and time:
                     </label>
                     <input className="border-4 rounded-lg border-orange-400 w-1/6 mb-3"
-                        defaultValue={concertData.defaultDate}
-                        id="datetime"
-                        type="datetime-local"
-                        name="datetime"
-                        required
-                        pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}"
+                           defaultValue={concertData.defaultDate}
+                           id="datetime"
+                           type="datetime-local"
+                           name="datetime"
+                           required
+                           pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}"
                     />
                     <label className="w-fit font-bold m-1" htmlFor="genre">
                         Genre:
                     </label>
-                    <input className="border-4 rounded-lg border-orange-400 w-1/6 mb-3" defaultValue={concertData.defaultGenre} id="genre" type="text" name="genre"
+                    <input className="border-4 rounded-lg border-orange-400 w-1/6 mb-3"
+                           defaultValue={concertData.defaultGenre} id="genre" type="text" name="genre"
                            required/>
                     <input type="hidden" name="id" defaultValue={concertData.id}/>
                     <button className="m-3 px-5 py-2 bg-orange-400 rounded-lg font-bold w-fit" name="intent"

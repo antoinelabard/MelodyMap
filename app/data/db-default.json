@@ -3,32 +3,62 @@
     {
       "id": "1a234567-89ab-4cde-8f01-23b45c678901",
       "name": "John Smith",
-      "instruments": ["Guitar", "Piano"],
-      "genres": ["Jazz", "Blues"]
+      "instruments": [
+        "Guitar",
+        "Piano"
+      ],
+      "genres": [
+        "Jazz",
+        "Blues"
+      ]
     },
     {
       "id": "2b345678-9abc-4def-8012-34c56d789012",
       "name": "Alice Johnson",
-      "instruments": ["Violin", "Cello"],
-      "genres": ["Classical", "Orchestral"]
+      "instruments": [
+        "Violin",
+        "Cello"
+      ],
+      "genres": [
+        "Classical",
+        "Orchestral"
+      ]
     },
     {
       "id": "3c456789-abcd-4efg-0123-45d67e890123",
       "name": "David Williams",
-      "instruments": ["Saxophone", "Trumpet"],
-      "genres": ["Jazz", "Funk"]
+      "instruments": [
+        "Saxophone",
+        "Trumpet"
+      ],
+      "genres": [
+        "Jazz",
+        "Funk"
+      ]
     },
     {
       "id": "4d567890-bcde-4fgh-1234-56e78f901234",
       "name": "Emily Davis",
-      "instruments": ["Flute", "Piano"],
-      "genres": ["Classical", "Jazz"]
+      "instruments": [
+        "Flute",
+        "Piano"
+      ],
+      "genres": [
+        "Classical",
+        "Jazz"
+      ]
     },
     {
       "id": "5e678901-cdef-4gh0-2345-67f89a012345",
       "name": "Michael Brown",
-      "instruments": ["Drums", "Guitar"],
-      "genres": ["Rock", "Fusion"]
+      "instruments": [
+        "Drums",
+        "Guitar"
+      ],
+      "genres": [
+        "Rock",
+        "Fusion"
+      ]
     }
   ],
   "concerts": [
@@ -70,5 +100,10 @@
       "genre": "Rock"
     }
   ],
-  "cities": ["Bordeaux", "Paris", "Rennes", "Rouen"]
+  "cities": [
+    "Bordeaux",
+    "Paris",
+    "Rennes",
+    "Rouen"
+  ]
 }

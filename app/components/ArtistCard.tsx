@@ -15,7 +15,8 @@ export function ArtistCard({artist}) {
             <ul className="flex flex-row flex-wrap">{artist.instruments.map((instrument) => (
                 <li className="py-1 px-4 m-1 rounded-full border-2 border-orange-400" key={instrument}>{instrument}</li>
             ))}</ul>
-            <Link className="m-3 px-5 py-2 bg-orange-400 rounded-lg font-bold text-center" to={`artist/${artist.id}`}>Modify</Link>
+            <Link className="m-3 px-5 py-2 bg-orange-400 rounded-lg font-bold text-center"
+                  to={`artist/${artist.id}`}>Modify</Link>
         </div>
     )
 }

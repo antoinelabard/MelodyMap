@@ -60,7 +60,8 @@ export default function ArtistsPage() {
                         ))}
                     </ul>
                     <div className="flex flex-col">
-                        <Link className="m-3 px-5 py-2 w-fit bg-orange-400 rounded-lg font-bold" to="/artist/new">Add a new
+                        <Link className="m-3 px-5 py-2 w-fit bg-orange-400 rounded-lg font-bold" to="/artist/new">Add a
+                            new
                             artist</Link>
                         <div className="flex flex-row">
                             <fieldset className="m-3 border-4 rounded-lg border-orange-400 flex flex-col w-fit p-3">

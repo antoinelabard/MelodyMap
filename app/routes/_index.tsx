@@ -22,7 +22,7 @@ export default function Index() {
     const {concerts, artists, cities} = useLoaderData<typeof loader>()
     return (
         <main>
-        <Header/>
+            <Header/>
             <h1 className="text-6xl text-center align-middle my-40">Welcome to MelodyMap</h1>
         </main>
     );
