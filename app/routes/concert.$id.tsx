@@ -36,7 +36,7 @@ export const action = async ({request}: ActionArgs) => {
         case "remove":
             await Repository.removeConcert(id)
     }
-    return redirect("/")
+    return redirect("/concerts")
 
 }
 export const loader = async ({params}: LoaderArgs) => {

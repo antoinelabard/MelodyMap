@@ -33,7 +33,7 @@ export const action = async ({request}: ActionArgs) => {
         case "remove":
             await Repository.removeArtist(id)
     }
-    return redirect("/")
+    return redirect("/artists")
 }
 export const loader = async ({params}: LoaderArgs) => {
     const artistData = {
