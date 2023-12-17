@@ -32,7 +32,7 @@
         "address": "addressC",
         "city": "cityA"
       },
-      "date": "2024-06-01",
+      "datetime": "2024-06-01T20:00",
       "genre": "genreA1",
       "comment": "COMPATIBLE WITH nameA"
     },
@@ -42,7 +42,7 @@
         "address": "addressD",
         "city": "cityB"
       },
-      "date": "2022-06-01",
+      "datetime": "2022-06-01T20:00",
       "genre": "genreA1",
       "comment": "ANTERIOR TO CURRENT DATE"
     },
@@ -52,7 +52,7 @@
         "address": "addressE",
         "city": "cityE"
       },
-      "date": "2024-03-18",
+      "datetime": "2024-03-18T20:00",
       "genre": "genreE1",
       "comment": "COMPATIBLE WITH NO ARTIST"
     }

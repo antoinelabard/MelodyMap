@@ -22,7 +22,7 @@ export type Location = {
 export type Concert = {
     id: string,
     location: Location,
-    date: string,
+    datetime: string,
     genre: string
 }
 
@@ -92,7 +92,7 @@ export class Repository {
                 "address": address,
                 "city": city
             },
-            "date": date,
+            "datetime": date,
             "genre": genre
         })
         data.concerts = filteredConcerts
