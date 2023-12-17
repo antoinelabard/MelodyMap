@@ -9,11 +9,12 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import { Repository } from "./data/Repository"
+import stylesheet from "~/tailwind.css"
 
 Repository.resetDatabase()
 
 export const links: LinksFunction = () => [
-  ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
+  { rel: "stylesheet", href: stylesheet },
 ];
 
 export default function App() {
