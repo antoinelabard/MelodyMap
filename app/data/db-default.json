@@ -30,7 +30,7 @@
       "id": "488fc06a-9ba1-4b10-8602-b8b58e674337",
       "location": {
         "address": "addressC",
-        "city": "cityA"
+        "city": "Bordeaux"
       },
       "datetime": "2024-06-01T20:00",
       "genre": "genreA1",
@@ -40,7 +40,7 @@
       "id": "76f26d5c-cb49-45de-931f-23e56083f78e",
       "location": {
         "address": "addressD",
-        "city": "cityB"
+        "city": "Rouen"
       },
       "datetime": "2022-06-01T20:00",
       "genre": "genreA1",
@@ -50,7 +50,7 @@
       "id": "c5b07c13-7ea6-4c4a-a273-ed9126cdfaac",
       "location": {
         "address": "addressE",
-        "city": "cityE"
+        "city": "Rennes"
       },
       "datetime": "2024-03-18T20:00",
       "genre": "genreE1",
@@ -58,9 +58,9 @@
     }
   ],
   "cities": [
-    "cityA",
-    "cityB",
-    "cityC",
-    "cityD"
+    "Bordeaux",
+    "Paris",
+    "Rennes",
+    "Rouen"
   ]
 }

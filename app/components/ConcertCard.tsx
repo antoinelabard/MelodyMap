@@ -11,7 +11,7 @@ export function ConcertCard({concert}) {
             <p>{concert.date}</p>
             <p>{concert.location.address}, {concert.location.city}</p>
             <p>{concert.genre}</p>
-            <Link to={""}>Modify</Link>
+            <Link to={`concert/${concert.id}`}>Modify</Link>
         </div>
     )
 }
