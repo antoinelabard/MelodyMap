@@ -26,21 +26,7 @@ export default function Index() {
     return (
         <main>
         <Header/>
-            <h1>Welcome to Remix</h1>
-            <div>
-                <ul>
-                    {concerts.map((concert: Concert) => (
-                        <li key={concert.id}>
-                            <ConcertCard concert={concert}/>
-                        </li>
-                    ))}
-                </ul>
-                <ul>{artists.map((artist: Artist) => (
-                    <li key={artist.id}>
-                        <ArtistCard artist={artist}/>
-                    </li>
-                ))}</ul>
-            </div>
+            <h1 className="text-6xl text-center align-middle my-40">Welcome to Remix</h1>
             <Footer/>
         </main>
     );
