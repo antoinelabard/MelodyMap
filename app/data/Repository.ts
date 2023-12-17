@@ -38,10 +38,10 @@ export class Repository {
     }
 
     static async addOrUpdateArtist(
-        id: string,
         name: string,
         instruments: string[],
-        genres: string[]
+        genres: string[],
+        id: string = uuid4()
     ): Promise<void> {
         const data = await this.loadData()
         const filteredArtists = data.artists.filter((artist: Artist) => artist.id !== id)
@@ -54,7 +54,6 @@ export class Repository {
         data.artists = filteredArtists
         await this.saveData(data)
     }
-
 
     static async removeArtist(id: string): Promise<void> {
         const data = await this.loadData()

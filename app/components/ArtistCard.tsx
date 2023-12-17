@@ -15,7 +15,7 @@ export function ArtistCard({artist}) {
             <ul>{artist.instruments.map((instrument) => (
                 <li key={instrument}>{instrument}</li>
             ))}</ul>
-            <Link to={""}>Modify</Link>
+            <Link to={`artist/${artist.id}`}>Modify</Link>
         </div>
     )
 }
