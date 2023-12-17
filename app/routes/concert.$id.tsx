@@ -3,6 +3,7 @@ import {redirect} from "@remix-run/node"
 import {Link, useLoaderData} from "@remix-run/react";
 import {Concert, Repository} from "~/data/Repository"
 import type {LoaderArgs} from "@remix-run/node"
+import {Header} from "~/components/Header";
 
 export const action = async ({request}: ActionArgs) => {
     const form = await request.formData()
@@ -63,18 +64,23 @@ export default function ConcertPage() {
 
     return (
         <div>
-            <h1>Concert</h1>
-            <form method="post">
-                <fieldset>
-                    <legend>Location</legend>
-                    <label htmlFor="address">
-                        Address: <input defaultValue={concertData.defaultAddress} id="address" type="text"
-                                        name="address"
-                                        required/>
-                    </label>
-                    <label htmlFor="city-select">
-                        City:
-                        <select defaultValue={concertData.DefaultCity} name="city" id="city-select" required>
+            <Header/>
+            <main className="m-5">
+                <h1 className="text-6xl font-bold text-center m-5">Concert</h1>
+                <form method="post" className="flex flex-col items-middle">
+                    <fieldset className="border-2 rounded w-fit p-3">
+                        <legend>Location</legend>
+                        <label className="w-fit font-bold m-1" htmlFor="address">
+                            Address:
+                        </label>
+                        <input className="border-4 rounded-lg border-orange-400 mb-3" defaultValue={concertData.defaultAddress} id="address" type="text"
+                               name="address"
+                               required/>
+                        <label className="w-fit font-bold m-1" htmlFor="city-select">
+                            City:
+
+                        </label>
+                        <select className="border-4 rounded-lg border-orange-400 mb-3" defaultValue={concertData.DefaultCity} name="city" id="city-select" required>
                             <option value="">--Please choose an option--</option>
                             {cities.map((city) => (
                                 <option
@@ -83,11 +89,11 @@ export default function ConcertPage() {
                                 >{city}</option>
                             ))}
                         </select>
+                    </fieldset>
+                    <label className="w-fit font-bold m-1" htmlFor="datetime">
+                        Date and time:
                     </label>
-                </fieldset>
-                <label htmlFor="datetime">
-                    Date and time:
-                    <input
+                    <input className="border-4 rounded-lg border-orange-400 w-1/6 mb-3"
                         defaultValue={concertData.defaultDate}
                         id="datetime"
                         type="datetime-local"
@@ -95,14 +101,20 @@ export default function ConcertPage() {
                         required
                         pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}"
                     />
-                </label>
-                <label htmlFor="genre">
-                    Genre: <input defaultValue={concertData.defaultGenre} id="genre" type="text" name="genre" required/>
-                </label>
-                <input type="hidden" name="id" defaultValue={concertData.id}/>
-                <button name="intent" value="addOrUpdate">Add or update</button>
-                <button name="intent" value="remove">Remove</button>
-            </form>
+                    <label className="w-fit font-bold m-1" htmlFor="genre">
+                        Genre:
+                    </label>
+                    <input className="border-4 rounded-lg border-orange-400 w-1/6 mb-3" defaultValue={concertData.defaultGenre} id="genre" type="text" name="genre"
+                           required/>
+                    <input type="hidden" name="id" defaultValue={concertData.id}/>
+                    <button className="m-3 px-5 py-2 bg-orange-400 rounded-lg font-bold w-fit" name="intent"
+                            value="addOrUpdate">Add or update
+                    </button>
+                    <button className="m-3 px-5 py-2 bg-orange-400 rounded-lg font-bold w-fit" name="intent"
+                            value="remove">Remove
+                    </button>
+                </form>
+            </main>
         </div>
     )
 }
