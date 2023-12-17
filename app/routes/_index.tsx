@@ -1,10 +1,7 @@
 import type {MetaFunction} from "@remix-run/node";
 import {useLoaderData} from "@remix-run/react";
-import {Repository, Concert, Artist} from "~/data/Repository";
-import {ConcertCard} from "~/components/ConcertCard"
-import {ArtistCard} from "~/components/ArtistCard";
+import {Repository} from "~/data/Repository";
 import {Header} from "~/components/Header";
-import {Footer} from "~/components/Footer";
 
 export const meta: MetaFunction = () => {
     return [
@@ -27,7 +24,6 @@ export default function Index() {
         <main>
         <Header/>
             <h1 className="text-6xl text-center align-middle my-40">Welcome to Remix</h1>
-            <Footer/>
         </main>
     );
 }

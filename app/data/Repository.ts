@@ -1,30 +1,8 @@
 import {promises as fs} from "fs"
 import {v4 as uuid4} from "uuid"
-
-export type Artist = {
-    id: string,
-    name: string,
-    instruments: string[],
-    genres: string[]
-}
-
-type Data = {
-    artists: Artist[],
-    concerts: Concert[],
-    cities: string[]
-}
-
-export type Location = {
-    address: string,
-    city: string
-}
-
-export type Concert = {
-    id: string,
-    location: Location,
-    datetime: string,
-    genre: string
-}
+import {Artist} from "~/models/Artist";
+import {Concert} from "~/models/Concert";
+import {Data} from "~/models/Data";
 
 export class Repository {
     static async getArtists(): Promise<Artist[]> {

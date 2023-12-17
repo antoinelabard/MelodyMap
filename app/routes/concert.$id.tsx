@@ -1,9 +1,10 @@
 import {ActionArgs, json} from "@remix-run/node"
 import {redirect} from "@remix-run/node"
 import {Link, useLoaderData} from "@remix-run/react";
-import {Concert, Repository} from "~/data/Repository"
+import {Repository} from "~/data/Repository"
 import type {LoaderArgs} from "@remix-run/node"
 import {Header} from "~/components/Header";
+import {Concert} from "~/models/Concert";
 
 export const action = async ({request}: ActionArgs) => {
     const form = await request.formData()

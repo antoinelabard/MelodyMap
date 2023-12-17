@@ -1,9 +1,9 @@
 import {Link, useLoaderData} from "@remix-run/react";
-import {Repository, Artist} from "~/data/Repository";
+import {Repository} from "~/data/Repository";
 import {ArtistCard} from "~/components/ArtistCard";
 import {Header} from "~/components/Header";
-import {Footer} from "~/components/Footer";
 import {useState} from "react";
+import {Artist} from "~/models/Artist";
 
 export const loader = async () => {
     return {
@@ -83,7 +83,6 @@ export default function ArtistsPage() {
                     </div>
                 </div>
             </main>
-            <Footer/>
         </div>
     )
 }
