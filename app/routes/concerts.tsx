@@ -28,18 +28,9 @@ export default function ConcertsPage() {
     return (
         <div>
             <Header/>
-            <main>
-                <h1>Welcome to Remix</h1>
-                <Link to="/concert/new">Add a new concert</Link>
-                <fieldset>
-                    <legend>Filter by genres</legend>
-                    {genres.map((genre) => (
-                        <label key={genre} htmlFor={genre}>
-                            <input type="checkbox" id={genre} name="filteredGenres"
-                                   onClick={() => toggleFilteredGenre(genre)}/>{genre}
-                        </label>
-                    ))}
-                </fieldset>
+            <main className="p-5">
+                <h1 className="text-6xl font-bold text-center m-5">Concerts</h1>
+                <div className="flex flex-row justify-between">
                 <ul>
                     {concerts
                         .filter((concert: Concert) => new Date(concert.datetime) > new Date())
@@ -58,6 +49,19 @@ export default function ConcertsPage() {
                             </li>
                         ))}
                 </ul>
+                    <div className="flex flex-col">
+                        <Link className="m-3 px-5 py-2 bg-orange-400 rounded-lg font-bold" to="/concert/new">Add a new concert</Link>
+                        <fieldset className="m-3 border-4 rounded-lg border-orange-400 flex flex-col w-fit p-3">
+                            <legend>Filter by genres</legend>
+                            {genres.map((genre) => (
+                                <label key={genre} htmlFor={genre}>
+                                    <input type="checkbox" id={genre} name="filteredGenres"
+                                           onClick={() => toggleFilteredGenre(genre)}/>{genre}
+                                </label>
+                            ))}
+                        </fieldset>
+                    </div>
+                </div>
             </main>
             <Footer/>
         </div>
