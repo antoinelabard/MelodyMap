@@ -4,6 +4,12 @@ import {Artist} from "~/models/Artist";
 import {Concert} from "~/models/Concert";
 import {Data} from "~/models/Data";
 
+/**
+ * Repository handles all the requests to the database and provide an interface for the project. It allows to only deal
+ * with JS objects.
+ *
+ * It uses db-default.json to re-populate the database at each server start, in order to reset the previous state.
+ */
 export class Repository {
     static async getArtists(): Promise<Artist[]> {
         const data = await this.loadData()

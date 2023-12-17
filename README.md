@@ -1,6 +1,12 @@
-# Welcome to Remix!
+# Welcome to MelodyMap!
 
-- [Remix Docs](https://remix.run/docs)
+MelodyMap is a platform that compiles information about concerts and artists, allowing users to refine artist searches
+based on genre and instrument, as well as filter concerts.
+
+Technologies :
+
+- RemixJS
+- Tailwind
 
 ## Development
 

@@ -42,12 +42,14 @@ export default function ArtistsPage() {
         <div>
             <Header/>
             <main className="p-5">
-                <h1 className="text-6xl font-bold text-center m-5">Welcome to Remix</h1>
+                <h1 className="text-6xl font-bold text-center m-5">Artists</h1>
                 <div className="flex flex-row justify-between">
                     <ul>{artists
+                        // remove all the artists not marching the genres filters
                         .filter((artist: Artist) =>
                             filteredGenres.length === 0
                             || filteredGenres.some((g: string) => artist.genres.includes(g)))
+                        // remove all the artists not marching the instruments filters
                         .filter((artist: Artist) =>
                             filteredInstruments.length === 0
                             || filteredInstruments.some((i: string) => artist.instruments.includes(i)))

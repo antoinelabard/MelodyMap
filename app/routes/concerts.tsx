@@ -33,9 +33,12 @@ export default function ConcertsPage() {
                 <div className="flex flex-row justify-between">
                 <ul>
                     {concerts
+                        // remove all anterior concerts
                         .filter((concert: Concert) => new Date(concert.datetime) > new Date())
+                        // remove all the concerts not matching the filters
                         .filter((concert: Concert) =>
                             filteredGenres.length === 0 || filteredGenres.includes(concert.genre))
+                        // sort the concert from the nearest in time to the farthest
                         .sort((a: Concert, b: Concert) => {
                             const datetimeA =new Date(a.datetime)
                             const datetimeB =new Date(b.datetime)

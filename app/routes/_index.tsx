@@ -5,8 +5,8 @@ import {Header} from "~/components/Header";
 
 export const meta: MetaFunction = () => {
     return [
-        {title: "New Remix App"},
-        {name: "description", content: "Welcome to Remix!"},
+        {title: "MelodyMap"},
+        {name: "description", content: "Welcome to MelodyMap!"},
     ];
 };
 
@@ -23,7 +23,7 @@ export default function Index() {
     return (
         <main>
         <Header/>
-            <h1 className="text-6xl text-center align-middle my-40">Welcome to Remix</h1>
+            <h1 className="text-6xl text-center align-middle my-40">Welcome to MelodyMap</h1>
         </main>
     );
 }
