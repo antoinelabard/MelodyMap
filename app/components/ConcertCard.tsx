@@ -8,7 +8,7 @@ export function ConcertCard({concert}) {
         }
     })
     return (<div>
-            <p>{concert.date}</p>
+            <p>{new Date(concert.datetime).toString()}</p>
             <p>{concert.location.address}, {concert.location.city}</p>
             <p>{concert.genre}</p>
             <Link to={`concert/${concert.id}`}>Modify</Link>

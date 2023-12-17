@@ -44,6 +44,13 @@ export default function ConcertsPage() {
                         .filter((concert: Concert) => new Date(concert.datetime) > new Date())
                         .filter((concert: Concert) =>
                             filteredGenres.length === 0 || filteredGenres.includes(concert.genre))
+                        .sort((a: Concert, b: Concert) => {
+                            const datetimeA =new Date(a.datetime)
+                            const datetimeB =new Date(b.datetime)
+                            if (datetimeA < datetimeB) return -1
+                            if (datetimeA > datetimeB) return 1
+                            return 0
+                        })
                         .map((concert: Concert) => (
                             <li key={concert.id}>
                                 <ConcertCard concert={concert}/>
