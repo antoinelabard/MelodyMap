@@ -1,4 +1,5 @@
 import {promises as fs} from "fs"
+import {v4 as uuid4} from "uuid"
 
 export type Artist = {
     id: string,
@@ -77,11 +78,11 @@ export class Repository {
     }
 
     static async addOrUpdateConcert(
-        id: string,
         address: string,
         city: string,
         date: string,
-        genre: string
+        genre: string,
+        id: string = uuid4()
     ): Promise<void> {
         const data = await this.loadData()
         const filteredConcerts = data.concerts.filter((concert: Concert) => concert.id !== id)
