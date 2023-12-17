@@ -33,7 +33,7 @@ export default function ConcertsPage() {
                 <fieldset>
                     <legend>Filter by genres</legend>
                     {genres.map((genre) => (
-                        <label key={genre} htmlFor="genreA1">
+                        <label key={genre} htmlFor={genre}>
                             <input type="checkbox" id={genre} name="filteredGenres"
                                    onClick={() => toggleFilteredGenre(genre)}/>{genre}
                         </label>
