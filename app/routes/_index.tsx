@@ -3,6 +3,8 @@ import {useLoaderData} from "@remix-run/react";
 import {Repository, Concert, Artist} from "~/data/Repository";
 import {ConcertCard} from "~/components/ConcertCard"
 import {ArtistCard} from "~/components/ArtistCard";
+import {Header} from "~/components/Header";
+import {Footer} from "~/components/Footer";
 
 export const meta: MetaFunction = () => {
     return [
@@ -22,7 +24,8 @@ export const loader = async () => {
 export default function Index() {
     const {concerts, artists, cities} = useLoaderData<typeof loader>()
     return (
-        <div style={{fontFamily: "system-ui, sans-serif", lineHeight: "1.8"}}>
+        <main>
+        <Header/>
             <h1>Welcome to Remix</h1>
             <div>
                 <ul>
@@ -38,6 +41,7 @@ export default function Index() {
                     </li>
                 ))}</ul>
             </div>
-        </div>
+            <Footer/>
+        </main>
     );
 }
