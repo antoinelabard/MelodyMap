@@ -59,7 +59,7 @@ export default function ArtistPage() {
         <div>
             <Header/>
             <main className="m-5">
-                <h1 className="text-6xl font-bold text-center m-5">{!artistData.name ? "New artist" : artistData.defaultName}</h1>
+                <h1 className="text-6xl font-bold text-center m-5">{!artistData.defaultName ? "New artist" : artistData.defaultName}</h1>
                 <form method="post" className="flex flex-col items-middle">
                     <label className="w-fit font-bold m-1" htmlFor="name">
                         Name:
@@ -71,14 +71,14 @@ export default function ArtistPage() {
                     </label>
                     <textarea className="border-4 rounded-lg border-orange-400 w-1/6 mb-3" id="instruments"
                               name="instruments" rows={10} cols={20}
-                              defaultValue={artistData.defaultInstruments.join("\n")}>
+                              defaultValue={artistData.defaultInstruments.join("\n")} required>
                     </textarea>
                     <label className="w-fit font-bold m-1" htmlFor="genres">
                         Genres (separated with new lines):
                     </label>
                     <textarea className="border-4 rounded-lg border-orange-400 w-1/6 mb-3" id="genres" name="genres"
                               rows={10} cols={20}
-                              defaultValue={artistData.defaultGenres.join("\n")}>
+                              defaultValue={artistData.defaultGenres.join("\n")} required>
                     </textarea>
                     <input className="border-4 rounded-lg border-orange-400 w-1/6" type="hidden" name="id"
                            defaultValue={artistData.id}/>

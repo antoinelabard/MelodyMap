@@ -14,7 +14,10 @@ export const loader = async () => {
 export default function ConcertsPage() {
     const {concerts} = useLoaderData<typeof loader>()
     const [filteredGenres, setFilteredGenres] = useState([])
-    let genres = concerts.map((concert: Concert) => concert.genre)
+    let genres = concerts
+        // remove all anterior concerts
+        .filter((concert: Concert) => new Date(concert.datetime) > new Date())
+        .map((concert: Concert) => concert.genre)
     genres = [...new Set(genres)] // remove the duplicates entries
 
     function toggleFilteredGenre(genre: string): void {

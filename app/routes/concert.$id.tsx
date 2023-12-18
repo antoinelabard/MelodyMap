@@ -66,7 +66,7 @@ export default function ConcertPage() {
         <div>
             <Header/>
             <main className="m-5">
-                <h1 className="text-6xl font-bold text-center m-5">Concert</h1>
+                <h1 className="text-6xl font-bold text-center m-5">{!concertData.defaultAddress ? "New Concert" : "Concert edit"}</h1>
                 <form method="post" className="flex flex-col items-middle">
                     <fieldset className="border-2 rounded w-fit p-3">
                         <legend>Location</legend>
